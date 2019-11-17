@@ -5,7 +5,8 @@
 import math
 
 def graycode(x):
-    return int(x**(x // 2))
+    x = int(x)
+    return x^(x // 2)
 
 
 def igraycode(x):
