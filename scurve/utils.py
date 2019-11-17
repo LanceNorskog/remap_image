@@ -5,7 +5,7 @@
 import math
 
 def graycode(x):
-    return x^(x>>1)
+    return int(x**(x // 2))
 
 
 def igraycode(x):
@@ -50,7 +50,8 @@ def rrot(x, i, width):
         width: the bit width of x.
     """
     assert x < 2**width
-    i = i%width
+    x = int(x)
+    i = int(i%width)
     x = (x>>i) | (x<<width-i)
     return x&(2**width-1)
 
@@ -62,9 +63,9 @@ def lrot(x, i, width):
         width: the bit width of x.
     """
     assert x < 2**width
-    i = i%width
+    i = int(i%width)
     x = (x<<i) | (x>>width-i)
-    return x&(2**width-1)
+    return x&int(2**width-1)
 
 
 def tsb(x, width):
