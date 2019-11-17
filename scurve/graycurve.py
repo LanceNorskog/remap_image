@@ -1,5 +1,5 @@
 import math
-import utils
+#import utils
 
 class GrayCurve:
     def __init__(self, dimension, bits):
